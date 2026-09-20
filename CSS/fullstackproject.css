@@ -1,0 +1,384 @@
+/* =========================================
+   LIFELINK - FRONTEND CSS
+========================================= */
+
+:root {
+    --bg: #FBF9F6;
+    --surface: #FFFFFF;
+    --ink: #1A1620;
+    --inkSoft: #6B6570;
+    --line: #EAE4DD;
+
+    --red: #B0203A;
+    --redDeep: #7E1729;
+    --redSoft: #F7E3E6;
+
+    --navy: #12263A;
+    --gold: #C79A4B;
+    --green: #2E7D5B;
+    --amber: #B8752A;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   CONTAINERS
+========================================= */
+
+.container {
+    width: min(1180px, 100%);
+    margin: auto;
+    padding: 0 24px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(251, 249, 246, 0.95);
+    backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-container {
+    width: min(1180px, 100%);
+    height: 64px;
+
+    margin: auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* Brand */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: 800;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 8px;
+
+    background: var(--red);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-name {
+    font-size: 19px;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.nav-links a {
+    padding: 8px 10px;
+
+    border-radius: 8px;
+
+    color: var(--inkSoft);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--red);
+    background: var(--redSoft);
+}
+
+
+/* Navigation actions */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 8px;
+
+    padding: 10px 18px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border: 1px solid transparent;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        filter 0.2s;
+}
+
+.btn:hover {
+    filter: brightness(0.95);
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: var(--red);
+    color: white;
+    border-color: var(--red);
+}
+
+.btn-dark {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line);
+}
+
+.btn-large {
+    padding: 13px 24px;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    background:
+        linear-gradient(
+            180deg,
+            #FBF9F6 0%,
+            #F6EEEF 100%
+        );
+}
+
+.hero-container {
+    width: min(1180px, 100%);
+
+    margin: auto;
+
+    padding:
+        80px 24px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+/* Hero text */
+
+.hero-content h1 {
+    margin-top: 18px;
+
+    font-size: 48px;
+    line-height: 1.1;
+
+    letter-spacing: -0.03em;
+}
+
+.hero-content h1 span {
+    color: var(--red);
+}
+
+.hero-content p {
+    max-width: 520px;
+
+    margin-top: 18px;
+
+    color: var(--inkSoft);
+
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 26px;
+}
+
+
+/* =========================================
+   BADGES
+========================================= */
+
+.badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 4px 10px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-red {
+    background: var(--redSoft);
+    color: var(--redDeep);
+}
+
+.badge-navy {
+    background: #E7ECF1;
+    color: var(--navy);
+}
+
+
+/* =========================================
+   BLOOD CARD
+========================================= */
+
+.blood-card {
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 14px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 10px 30px rgba(18, 38, 58, 0.05);
+}
+
+.blood-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+.blood-box {
+    background: var(--redSoft);
+
+    border-radius: 12px;
+
+    min-height: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    font-size: 22px;
+}
+
+.blood-box strong {
+    color: var(--redDeep);
+    font-size: 15px;
+}
+
+.blood-card > p {
+    text-align: center;
+
+    color: var(--inkSoft);
+
+    font-size: 13px;
+
+    margin-top: 18px;
+}
