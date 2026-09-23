@@ -1,0 +1,73 @@
+
+:root{
+  --bg:#FBF9F6; --surface:#FFFFFF; --ink:#1A1620; --inkSoft:#6B6570;
+  --line:#EAE4DD; --red:#B0203A; --redDeep:#7E1729; --redSoft:#F7E3E6;
+  --navy:#12263A; --gold:#C79A4B; --green:#2E7D5B; --amber:#B8752A;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1180px;margin:auto;padding:0 24px}
+.wrap-md{max-width:900px;margin:auto;padding:0 24px}
+.wrap-sm{max-width:720px;margin:auto;padding:0 24px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(251,249,246,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:19px}
+.logo{width:32px;height:32px;border-radius:8px;background:var(--red);display:flex;align-items:center;justify-content:center;color:#fff}
+.nav-links{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+.nav-links a{padding:8px 10px;border-radius:8px;font-size:14px;color:var(--inkSoft);font-weight:500}
+.nav-links a:hover,.nav-links a.active{color:var(--red);background:var(--redSoft)}
+.menu-check{display:none}
+.menu-label{display:none;font-size:24px;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;font-weight:600;font-size:14px;padding:10px 18px;border:1px solid transparent}
+.btn-primary{background:var(--red);color:#fff}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-outline{background:#fff;border-color:var(--line)}
+.btn:hover{filter:brightness(.95)}
+.hero{background:linear-gradient(180deg,#FBF9F6 0%,#F6EEEF 100%)}
+.hero-inner{max-width:1180px;margin:auto;padding:70px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+h1{font-size:40px;margin:0 0 10px;letter-spacing:-.02em}
+h2{font-size:25px;margin:0 0 10px}
+h3{font-size:17px;margin:0 0 8px}
+p,li{line-height:1.6}
+.muted{color:var(--inkSoft)}
+.section{padding:64px 0}
+.center{text-align:center}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--redSoft);color:var(--redDeep);font-size:12px;font-weight:700}
+.bg-tile{border-radius:12px;background:var(--redSoft);padding:22px;text-align:center;color:var(--redDeep);font-weight:800}
+.stats{margin-top:-35px;position:relative}
+.cta{background:linear-gradient(120deg,var(--red),var(--redDeep));border-radius:16px;padding:36px;color:#fff}
+footer{margin-top:60px;background:var(--navy);color:#fff}
+.footer-grid{padding:50px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+footer a{display:block;color:#AEB6C2;font-size:14px;margin:8px 0}
+footer a:hover{color:#fff}
+.bottom{border-top:1px solid #24384C;padding:18px 24px;text-align:center;color:#8894A3;font-size:12px}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.list{padding-left:20px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px;text-align:left;border-bottom:1px solid var(--line)}
+input,select,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:#fff}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.field{margin-bottom:16px}
+@media(max-width:1050px){
+  .nav-links{display:none}
+  .menu-label{display:block}
+  .menu-check:checked + .menu-label + .mobile-links{display:flex}
+  .mobile-links{display:none;flex-direction:column;padding:12px 24px 16px;border-top:1px solid var(--line)}
+  .mobile-links a{padding:10px}
+}
+@media(min-width:1051px){.mobile-links{display:none!important}}
+@media(max-width:900px){
+  .hero-inner,.g3,.g4,.card-grid,.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .hero-inner,.g2,.g3,.g4,.card-grid,.footer-grid{grid-template-columns:1fr}
+  h1{font-size:32px}
+  .nav-inner{height:auto;min-height:64px}
+}
