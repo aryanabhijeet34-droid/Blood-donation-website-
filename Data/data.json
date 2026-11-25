@@ -1,0 +1,104 @@
+{
+    "bloodGroups": [
+        "A+",
+        "A-",
+        "B+",
+        "B-",
+        "AB+",
+        "AB-",
+        "O+",
+        "O-"
+    ],
+    "donors": [
+        {
+            "id": 1,
+            "name": "Aarav A.",
+            "bloodGroup": "O+",
+            "city": "Mathura",
+            "distance": 2.4,
+            "availability": "Available",
+            "donationType": "Whole Blood"
+        },
+        {
+            "id": 2,
+            "name": "Diya B.",
+            "bloodGroup": "A+",
+            "city": "Agra",
+            "distance": 5.1,
+            "availability": "Available",
+            "donationType": "Platelets"
+        },
+        {
+            "id": 3,
+            "name": "Rohan C.",
+            "bloodGroup": "B+",
+            "city": "Mathura",
+            "distance": 7.2,
+            "availability": "Available",
+            "donationType": "Plasma"
+        }
+    ],
+    "donationTypes": [
+        {
+            "id": 1,
+            "name": "Whole Blood",
+            "description": "The most common type of blood donation."
+        },
+        {
+            "id": 2,
+            "name": "Plasma",
+            "description": "The liquid part of blood that can help many patients."
+        },
+        {
+            "id": 3,
+            "name": "Platelets",
+            "description": "Important for some cancer patients and surgical procedures."
+        },
+        {
+            "id": 4,
+            "name": "Double Red Cells",
+            "description": "A donation that collects two units of red blood cells."
+        }
+    ],
+    "healthcare": [
+        {
+            "id": 1,
+            "title": "Thalassemia Awareness",
+            "description": "Information and support related to blood transfusion needs."
+        },
+        {
+            "id": 2,
+            "title": "Anemia Awareness",
+            "description": "General information about anemia and blood-related health."
+        },
+        {
+            "id": 3,
+            "title": "Cancer-Related Blood Support",
+            "description": "Information about blood support during cancer treatment."
+        },
+        {
+            "id": 4,
+            "title": "Emergency Guidance",
+            "description": "General guidance for urgent blood requirements."
+        }
+    ],
+    "faqs": [
+        {
+            "id": 1,
+            "question": "Who can use LifeLink?",
+            "answer": "Donors, patients and families, hospitals, blood banks and volunteers."
+        },
+        {
+            "id": 2,
+            "question": "Can I find a donor?",
+            "answer": "Yes. Use the Find Donor page to browse available donor information."
+        },
+        {
+            "id": 3,
+            "question": "Does LifeLink replace emergency medical services?",
+            "answer": "No. LifeLink is a coordination and information platform and does not replace emergency medical care."
+        }
+    ],
+    "emergencyRequests": [],
+    "registeredDonors": []
+}
