@@ -1,96 +1,47 @@
 
 {
-  "stats": [
-    {
-      "icon": "👥",
-      "value": 1322,
-      "suffix": "+",
-      "label": "Registered Donors"
-    },
-    {
-      "icon": "🩸",
-      "value": 3420,
-      "suffix": "+",
-      "label": "Blood Donations"
-    },
-    {
-      "icon": "❤️",
-      "value": 9870,
-      "suffix": "+",
-      "label": "Lives Supported"
-    },
-    {
-      "icon": "📋",
-      "value": 12,
-      "suffix": "+",
-      "label": "Active Requests"
-    },
-    {
-      "icon": "🏥",
-      "value": 21,
-      "suffix": "+",
-      "label": "Registered Hospitals"
-    },
-    {
-      "icon": "📦",
-      "value": 12,
-      "suffix": "+",
-      "label": "Blood Banks"
-    }
-  ],
-  "donors": [
-    {
-      "name": "Aarav Sharma",
-      "bloodGroup": "A+",
-      "city": "Mathura",
-      "phone": "9000000001",
-      "available": true
-    },
-    {
-      "name": "Priya Verma",
-      "bloodGroup": "O-",
-      "city": "Mathura",
-      "phone": "9000000002",
-      "available": true
-    },
-    {
-      "name": "Kabir Singh",
-      "bloodGroup": "B+",
-      "city": "Agra",
-      "phone": "9000000003",
-      "available": true
-    },
-    {
-      "name": "Ananya Gupta",
-      "bloodGroup": "AB+",
-      "city": "Mathura",
-      "phone": "9000000004",
-      "available": false
-    },
-    {
-      "name": "Rohan Kumar",
-      "bloodGroup": "O+",
-      "city": "Hapur",
-      "phone": "9000000005",
-      "available": true
-    }
-  ],
-  "camps": [
-    {
-      "id": 1,
-      "date": "2026-12-01",
-      "title": "Community Blood Donation Camp",
-      "location": "Community Hall, Mathura",
-      "filled": 34,
-      "capacity": 60
-    },
-    {
-      "id": 2,
-      "date": "2026-12-10",
-      "title": "GLA University Blood Drive",
-      "location": "University Auditorium, Mathura",
-      "filled": 41,
-      "capacity": 100
-    }
-  ]
+    "donors": [
+        {
+            "id": 1,
+            "name": "Aarav Sharma",
+            "bloodGroup": "A+",
+            "city": "Mathura",
+            "available": true
+        },
+        {
+            "id": 2,
+            "name": "Diya Verma",
+            "bloodGroup": "O-",
+            "city": "Agra",
+            "available": false
+        },
+        {
+            "id": 3,
+            "name": "Kabir Singh",
+            "bloodGroup": "B+",
+            "city": "Mathura",
+            "available": true
+        },
+        {
+            "id": 4,
+            "name": "Ananya Gupta",
+            "bloodGroup": "AB+",
+            "city": "Vrindavan",
+            "available": true
+        },
+        {
+            "id": 5,
+            "name": "Rohan Kumar",
+            "bloodGroup": "O+",
+            "city": "Agra",
+            "available": false
+        },
+        {
+            "id": 6,
+            "name": "Meera Patel",
+            "bloodGroup": "A-",
+            "city": "Mathura",
+            "available": true
+        }
+    ]
 }

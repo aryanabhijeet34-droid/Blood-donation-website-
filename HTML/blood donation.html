@@ -1,580 +1,438 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>LifeLink – Blood Donation & Healthcare Support Platform</title>
+    <title>LifeLink | Give Blood. Save Lives.</title>
 
+    <!-- Connect CSS -->
     <link rel="stylesheet" href="blood_donation.css">
+
+    
+    
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- ========== NAVBAR ========== -->
+    <header class="ll-navbar">
 
-    <header class="navbar">
+        <a href="#home" class="ll-brand">
+            <span class="ll-brand-icon">🩸</span>
+            <span>LifeLink</span>
+        </a>
 
-        <div class="nav-container">
+        <nav class="ll-nav-links">
+            <a href="#home">Home</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#find-donor">Find Donor</a>
+            <a href="#camps">Camps</a>
+            <a href="#compatibility">Compatibility</a>
+            <a href="#awareness">Awareness</a>
+        </nav>
 
-            <a href="#" class="brand">
-                <span class="logo">🩸</span>
-                <span class="brand-name">LifeLink</span>
-            </a>
+        <div class="ll-nav-actions">
+            <a href="#emergency" class="ll-emergency-btn">🚨 Emergency</a>
 
-            <nav class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About</a>
-                <a href="donate-blood.html">Donate Blood</a>
-                <a href="find-donor.html">Find Donor</a>
-                <a href="blood-banks.html">Blood Banks</a>
-                <a href="camps.html">Camps</a>
-                <a href="compatibility.html">Compatibility</a>
-                <a href="awareness.html">Awareness</a>
-            </nav>
+            <button type="button" class="ll-login-btn" id="llOpenLogin">
+                Log In
+            </button>
 
-            <div class="nav-actions">
-                <a href="emergency.html" class="btn btn-primary">
-                    🚨 Emergency
-                </a>
-
-                <a href="login.html" class="btn btn-outline">
-                    Log In
-                </a>
-
-                <a href="register.html" class="btn btn-dark">
-                    Register
-                </a>
-            </div>
-
+            <a href="#register" class="ll-register-btn">Register</a>
         </div>
 
     </header>
 
 
-    <!-- ================= HERO ================= -->
-
+    <!-- ========== HOME / HERO ========== -->
     <main>
 
-        <section id="home" class="hero">
+        <section class="ll-hero" id="home">
 
-            <div class="hero-container">
+            <div class="ll-hero-content">
 
-                <div class="hero-content">
-
-                    <span class="badge badge-red">
-                        Trusted by donors, hospitals & blood banks
-                    </span>
-
-                    <h1>
-                        Give Blood.
-                        <span>Save Lives.</span>
-                    </h1>
-
-                    <p>
-                        LifeLink connects donors with patients, hospitals,
-                        and blood banks who need them — quickly, safely,
-                        and transparently.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="register.html" class="btn btn-primary btn-large">
-                            🩸 Donate Blood
-                        </a>
-
-                        <a href="request-blood.html" class="btn btn-dark btn-large">
-                            📋 Request Blood
-                        </a>
-
-                        <a href="emergency.html" class="btn btn-outline btn-large">
-                            🚨 Emergency Request
-                        </a>
-
-                    </div>
-
+                <div class="ll-trust-label">
+                    Trusted by donors, hospitals &amp; blood banks
                 </div>
 
+                <h1>
+                    Give Blood.<br>
+                    <span>Save Lives.</span>
+                </h1>
 
-                <!-- Blood Groups -->
-
-                <div class="blood-card">
-
-                    <div class="blood-grid">
-
-                        <div class="blood-box">
-                            🩸
-                            <strong>A+</strong>
-                        </div>
-
-                        <div class="blood-box">
-                            🩸
-                            <strong>A-</strong>
-                        </div>
-
-                        <div class="blood-box">
-                            🩸
-                            <strong>B+</strong>
-                        </div>
-
-                        <div class="blood-box">
-                            🩸
-                            <strong>B-</strong>
-                        </div>
-
-                        <div class="blood-box">
-                            🩸
-                            <strong>AB+</strong>
-                        </div>
-
-                        <div class="blood-box">
-                            🩸
-                            <strong>AB-</strong>
-                        </div>
-
-                        <div class="blood-box">
-                            🩸
-                            <strong>O+</strong>
-                        </div>
-
-                        <div class="blood-box">
-                            🩸
-                            <strong>O-</strong>
-                        </div>
-
-                    </div>
-
-                    <p>
-                        Every blood group is needed. Yours could be
-                        the match someone is waiting for.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= STATISTICS ================= -->
-
-        <section class="statistics">
-
-            <div class="stats-container">
-
-                <div class="stat-card">
-                    <span>👥</span>
-                    <h2>1,322+</h2>
-                    <p>Registered Donors</p>
-                </div>
-
-                <div class="stat-card">
-                    <span>🩸</span>
-                    <h2>3,420+</h2>
-                    <p>Blood Donations</p>
-                </div>
-
-                <div class="stat-card">
-                    <span>❤️</span>
-                    <h2>9,870+</h2>
-                    <p>Lives Supported</p>
-                </div>
-
-                <div class="stat-card">
-                    <span>📋</span>
-                    <h2>12+</h2>
-                    <p>Active Requests</p>
-                </div>
-
-                <div class="stat-card">
-                    <span>🏥</span>
-                    <h2>21+</h2>
-                    <p>Registered Hospitals</p>
-                </div>
-
-                <div class="stat-card">
-                    <span>📦</span>
-                    <h2>12+</h2>
-                    <p>Blood Banks</p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= HOW IT WORKS ================= -->
-
-        <section class="section">
-
-            <div class="container">
-
-                <h2>How LifeLink Works</h2>
-
-                <p class="section-description">
-                    Four simple steps from registration to saving a life.
+                <p class="ll-hero-description">
+                    LifeLink connects donors with patients, hospitals,
+                    and blood banks who need them — quickly, safely,
+                    and transparently.
                 </p>
 
-                <div class="steps-grid">
+                <div class="ll-hero-buttons">
 
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Register</h3>
-                        <p>
-                            Create a donor, patient, hospital,
-                            or blood bank account in minutes.
-                        </p>
-                    </div>
+                    <a href="#find-donor" class="ll-donate-btn">
+                        🩸 Donate Blood
+                    </a>
 
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Find or Request</h3>
-                        <p>
-                            Search compatible donors and blood banks,
-                            or submit a blood request.
-                        </p>
-                    </div>
+                    <a href="#find-donor" class="ll-request-btn">
+                        📋 Request Blood
+                    </a>
 
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Connect</h3>
-                        <p>
-                            Get matched and coordinate securely
-                            through the platform.
-                        </p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <h3>Save Lives</h3>
-                        <p>
-                            Donations are recorded and requests
-                            are tracked to completion.
-                        </p>
-                    </div>
+                    <a href="#find-donor" class="ll-find-btn">
+                        Find a Donor
+                    </a>
 
                 </div>
 
             </div>
 
-        </section>
 
+            <!-- Blood group cards -->
+            <div class="ll-blood-panel">
 
-        <!-- ================= WHY DONATE ================= -->
+                <div class="ll-blood-grid">
 
-        <section class="why-donate">
-
-            <div class="container why-container">
-
-                <div>
-
-                    <h2>Why Donate Blood?</h2>
-
-                    <div class="reasons">
-
-                        <div>
-                            <span>✔</span>
-                            <p>Saves lives in emergencies and trauma cases.</p>
-                        </div>
-
-                        <div>
-                            <span>✔</span>
-                            <p>Supports patients undergoing major surgeries.</p>
-                        </div>
-
-                        <div>
-                            <span>✔</span>
-                            <p>
-                                Helps patients with blood disorders
-                                like thalassemia.
-                            </p>
-                        </div>
-
-                        <div>
-                            <span>✔</span>
-                            <p>
-                                Sustains hospital and blood bank
-                                reserves year-round.
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <a href="donate-blood.html" class="btn btn-outline light-btn">
-                        Learn About Donation
-                    </a>
-
-                </div>
-
-
-                <div class="compatibility-box">
-
-                    <div>
+                    <button type="button" class="ll-blood-card"
+                        data-blood="A+" aria-pressed="false">
+                        <span>🩸</span>
                         <strong>A+</strong>
-                        <small>Compatible with multiple recipients</small>
-                    </div>
+                    </button>
 
-                    <div>
-                        <strong>O+</strong>
-                        <small>Compatible with multiple recipients</small>
-                    </div>
+                    <button type="button" class="ll-blood-card"
+                        data-blood="A-" aria-pressed="false">
+                        <span>🩸</span>
+                        <strong>A-</strong>
+                    </button>
 
-                    <div>
+                    <button type="button" class="ll-blood-card"
+                        data-blood="B+" aria-pressed="false">
+                        <span>🩸</span>
                         <strong>B+</strong>
-                        <small>Compatible with multiple recipients</small>
-                    </div>
+                    </button>
 
-                    <div>
+                    <button type="button" class="ll-blood-card"
+                        data-blood="B-" aria-pressed="false">
+                        <span>🩸</span>
+                        <strong>B-</strong>
+                    </button>
+
+                    <button type="button" class="ll-blood-card active"
+                        data-blood="AB+" aria-pressed="true">
+                        <span>🩸</span>
                         <strong>AB+</strong>
-                        <small>Compatible with multiple recipients</small>
-                    </div>
+                    </button>
+
+                    <button type="button" class="ll-blood-card"
+                        data-blood="AB-" aria-pressed="false">
+                        <span>🩸</span>
+                        <strong>AB-</strong>
+                    </button>
+
+                    <button type="button" class="ll-blood-card"
+                        data-blood="O+" aria-pressed="false">
+                        <span>🩸</span>
+                        <strong>O+</strong>
+                    </button>
+
+                    <button type="button" class="ll-blood-card"
+                        data-blood="O-" aria-pressed="false">
+                        <span>🩸</span>
+                        <strong>O-</strong>
+                    </button>
 
                 </div>
+
+                <p class="ll-blood-caption">
+                    Every blood group is needed. Yours could be the
+                    match someone is waiting for.
+                </p>
 
             </div>
 
         </section>
 
 
-        <!-- ================= EMERGENCY ================= -->
+        <!-- ========== STATISTICS ========== -->
+        <section class="ll-stats" aria-label="LifeLink statistics">
 
-        <section id="emergency" class="section">
+            <div class="ll-stat-card">
+                <span>👥</span>
+                <h2>1,322+</h2>
+                <p>Registered Donors</p>
+            </div>
 
-            <div class="emergency-card">
+            <div class="ll-stat-card">
+                <span>🩸</span>
+                <h2>3,420+</h2>
+                <p>Blood Donations</p>
+            </div>
 
-                <div>
-                    <small>Emergency</small>
+            <div class="ll-stat-card">
+                <span>💗</span>
+                <h2>9,870+</h2>
+                <p>Lives Supported</p>
+            </div>
 
-                    <h2>
-                        Someone needs blood right now.
-                    </h2>
-                </div>
+            <div class="ll-stat-card">
+                <span>📋</span>
+                <h2>12+</h2>
+                <p>Active Requests</p>
+            </div>
 
-                <a href="request-blood.html" class="btn btn-dark btn-large">
-                    🚨 Find Blood Now
-                </a>
+            <div class="ll-stat-card">
+                <span>🏥</span>
+                <h2>21+</h2>
+                <p>Registered Hospitals</p>
+            </div>
 
+            <div class="ll-stat-card">
+                <span>📦</span>
+                <h2>12+</h2>
+                <p>Blood Banks</p>
             </div>
 
         </section>
 
 
-        <!-- ================= BLOOD CAMPS ================= -->
+        <!-- ========== TEAM MEMBER 2: HOW IT WORKS ========== -->
+        <!-- Replace this placeholder with Member 2's section. -->
+        <section id="how-it-works" class="ll-team-section">
+            <h2>How LifeLink Works</h2>
+            <!-- Member 2 adds their content here. -->
+        </section>
 
-        <section id="camps" class="section">
 
-            <div class="container">
+        <!-- ========== FIND DONOR ========== -->
+        <section class="ll-find-section" id="find-donor">
 
-                <div class="section-header">
+            <div class="ll-section-heading">
+                <span>DONOR SEARCH</span>
+                <h2>Find a Blood Donor</h2>
+                <p>
+                    Search donors by name, blood group, city and availability.
+                </p>
+            </div>
 
-                    <div>
-                        <h2>Upcoming Blood Camps</h2>
+            <div class="ll-search-panel">
 
-                        <p>
-                            Find and register for upcoming
-                            blood donation camps.
-                        </p>
-                    </div>
-
-                    <a href="#" class="view-link">
-                        View all →
-                    </a>
-
+                <div class="ll-filter-field">
+                    <label for="llDonorName">Donor Name</label>
+                    <input type="text" id="llDonorName"
+                        placeholder="Enter donor name">
                 </div>
 
-
-                <div class="cards-grid">
-
-                    <article class="card">
-
-                        <span class="badge badge-navy">
-                            June 14, 2026
-                        </span>
-
-                        <h3>World Blood Donor Day Camp</h3>
-
-                        <p>
-                            📍 Community Hall, Station Road, Mathura
-                        </p>
-
-                        <small>
-                            34 / 60 slots filled
-                        </small>
-
-                        <a href="#" class="btn btn-primary full-btn">
-                            View & Register
-                        </a>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <span class="badge badge-navy">
-                            June 25, 2026
-                        </span>
-
-                        <h3>College Blood Drive</h3>
-
-                        <p>
-                            📍 University Auditorium, GLA University
-                        </p>
-
-                        <small>
-                            41 / 100 slots filled
-                        </small>
-
-                        <a href="#" class="btn btn-primary full-btn">
-                            View & Register
-                        </a>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <span class="badge badge-navy">
-                            July 10, 2026
-                        </span>
-
-                        <h3>Corporate Donation Camp</h3>
-
-                        <p>
-                            📍 TechPark Lobby, Agra
-                        </p>
-
-                        <small>
-                            12 / 50 slots filled
-                        </small>
-
-                        <a href="#" class="btn btn-primary full-btn">
-                            View & Register
-                        </a>
-
-                    </article>
-
+                <div class="ll-filter-field">
+                    <label for="llDonorBlood">Blood Group</label>
+                    <select id="llDonorBlood">
+                        <option value="">All Blood Groups</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
                 </div>
 
+                <div class="ll-filter-field">
+                    <label for="llDonorCity">City</label>
+                    <input type="text" id="llDonorCity"
+                        placeholder="Enter city">
+                </div>
+
+                <div class="ll-filter-field">
+                    <label for="llDonorAvailability">Availability</label>
+                    <select id="llDonorAvailability">
+                        <option value="">All Donors</option>
+                        <option value="available">Available</option>
+                        <option value="unavailable">Unavailable</option>
+                    </select>
+                </div>
+
+                <button type="button" id="llResetDonors">
+                    Reset Filters
+                </button>
+
+            </div>
+
+            <p id="llDonorCount" class="ll-donor-count"
+                aria-live="polite">
+                Loading donors...
+            </p>
+
+            <div class="ll-donor-results" id="llDonorResults"
+                aria-live="polite">
             </div>
 
         </section>
 
 
-        <!-- ================= TESTIMONIALS ================= -->
-
-        <section class="section">
-
-            <div class="container">
-
-                <h2>Stories from the LifeLink Community</h2>
-
-                <div class="cards-grid">
-
-                    <article class="card testimonial">
-                        <p>
-                            "I got a request notification, donated the
-                            same evening, and could see the request
-                            marked fulfilled the next day."
-                        </p>
-
-                        <strong>Priya S.</strong>
-                        <small>Donor</small>
-                    </article>
+        <!-- ========== TEAM MEMBER 3: CAMPS ========== -->
+        <!-- Replace this placeholder with Member 3's section. -->
+        <section id="camps" class="ll-team-section">
+            <!-- Member 3 adds the Camps section here. -->
+        </section>
 
 
-                    <article class="card testimonial">
-                        <p>
-                            "We needed O- blood urgently. LifeLink
-                            helped us connect with a donor."
-                        </p>
-
-                        <strong>Arjun M.</strong>
-                        <small>Patient's Family</small>
-                    </article>
+        <!-- ========== TEAM MEMBER 2: COMPATIBILITY ========== -->
+        <!-- Replace this placeholder with Member 2's section. -->
+        <section id="compatibility" class="ll-team-section">
+            <!-- Member 2 adds Compatibility here. -->
+        </section>
 
 
-                    <article class="card testimonial">
-                        <p>
-                            "The inventory visibility across nearby
-                            blood banks has improved our sourcing process."
-                        </p>
+        <!-- ========== TEAM MEMBER 3: AWARENESS ========== -->
+        <!-- Replace this placeholder with Member 3's section. -->
+        <section id="awareness" class="ll-team-section">
+            <!-- Member 3 adds Awareness here. -->
+        </section>
 
-                        <strong>Krishna Hospital</strong>
-                        <small>Verified Hospital</small>
-                    </article>
 
-                </div>
+        <!-- ========== TEAM MEMBER 4: EMERGENCY ========== -->
+        <!-- Replace this placeholder with Member 4's section. -->
+        <section id="emergency" class="ll-team-section">
+            <!-- Member 4 adds Emergency here. -->
+        </section>
 
-            </div>
 
+        <!-- ========== TEAM MEMBER 4: REGISTER ========== -->
+        <!-- Replace this placeholder with Member 4's section. -->
+        <section id="register" class="ll-team-section">
+            <!-- Member 4 adds Registration here. -->
         </section>
 
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
+<!-- ========== LIFELINK FOOTER ========== -->
 
-    <footer>
+<footer class="ll-footer" id="footer">
 
-        <div class="footer-container">
+    <div class="ll-footer-container">
 
-            <div class="footer-brand">
+        <!-- Brand -->
+        <div class="ll-footer-brand">
 
-                <div class="footer-logo">
-                    🩸 LifeLink
-                </div>
+            <a href="#home" class="ll-footer-logo">
+                <span>🩸</span>
+                LifeLink
+            </a>
 
-                <p>
-                    Every drop counts.
-                    Every life matters.
-                </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Platform</h4>
-
-                <a href="about.html">About</a>
-                <a href="donate-blood.html">Donate Blood</a>
-                <a href="request-blood.html">Request Blood</a>
-                <a href="find-donor.html">Find Donor</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Resources</h4>
-
-                <a href="blood-banks.html">Find Blood Bank</a>
-                <a href="camps.html">Blood Camps</a>
-                <a href="healthcare.html">Healthcare Support</a>
-                <a href="awareness.html">Awareness</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Company</h4>
-
-                <a href="faq.html">FAQ</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms & Conditions</a>
-
-            </div>
+            <p>
+                Every drop counts. Every life matters.
+            </p>
 
         </div>
 
 
-        <div class="footer-bottom">
-            © 2026 LifeLink.
+        <!-- Platform Links -->
+        <div class="ll-footer-column">
+
+            <h3>Platform</h3>
+
+            <a href="#home">Home</a>
+
+            <a href="#how-it-works">How It Works</a>
+
+            <a href="#find-donor">Find Donor</a>
+
+            <a href="#camps">Blood Camps</a>
+
         </div>
 
-    </footer>
 
+        <!-- Resources Links -->
+        <div class="ll-footer-column">
+
+            <h3>Resources</h3>
+
+            <a href="#compatibility">Compatibility</a>
+
+            <a href="#awareness">Awareness</a>
+
+            <a href="#emergency">Emergency</a>
+
+        </div>
+
+
+        <!-- Account Links -->
+        <div class="ll-footer-column">
+
+            <h3>Account</h3>
+
+            <a href="#" id="llFooterLogin">Log In</a>
+
+            <a href="#register">Register</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Copyright -->
+    <div class="ll-footer-bottom">
+
+        <p>
+            © 2026 LifeLink. Every drop counts.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+    <!-- ========== LOGIN MODAL ========== -->
+    <div class="ll-modal" id="llLoginModal"
+        aria-hidden="true">
+
+        <div class="ll-login-box" role="dialog"
+            aria-modal="true" aria-labelledby="llLoginTitle">
+
+            <button type="button" class="ll-close-login"
+                id="llCloseLogin" aria-label="Close login">
+                &times;
+            </button>
+
+            <div class="ll-login-icon">🩸</div>
+
+            <h2 id="llLoginTitle">Welcome Back!</h2>
+
+            <p class="ll-login-subtitle">
+                Log in to your LifeLink account
+            </p>
+
+            <form id="llLoginForm">
+
+                <label for="llLoginEmail">Email Address</label>
+                <input type="email" id="llLoginEmail"
+                    placeholder="Enter your email" required>
+
+                <label for="llLoginPassword">Password</label>
+                <input type="password" id="llLoginPassword"
+                    placeholder="Enter your password" required>
+
+                <button type="submit" class="ll-login-submit">
+                    Log In
+                </button>
+
+            </form>
+
+            <p id="llLoginMessage" class="ll-login-message"
+                aria-live="polite"></p>
+
+            <p class="ll-login-bottom">
+                Don't have an account?
+                <a href="#register" id="llGoRegister">Register</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="blood_donation.js" defer></script>
 </body>
+
 </html>

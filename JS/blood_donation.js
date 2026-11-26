@@ -1,530 +1,382 @@
 
-const DATA_URL = "./data.json";
+"use strict";
 
-$.ajax({
-    url: DATA_URL,
-    method: "GET",
-    dataType: "json",
+document.addEventListener("DOMContentLoaded", function () {
 
-    success: function(data) {
-        console.log("JSON Data Loaded:", data);
+    /* =========================================
+       1. FIND DONOR
+    ========================================= */
 
-        console.log(data.stats);
-        console.log(data.donors);
-        console.log(data.camps);
-    },
+    const donorName = document.getElementById("llDonorName");
+    const donorBlood = document.getElementById("llDonorBlood");
+    const donorCity = document.getElementById("llDonorCity");
+    const donorAvailability =
+        document.getElementById("llDonorAvailability");
 
-    error: function(error) {
-        console.log("Error loading JSON:", error);
-    }
-});
+    const donorResults = document.getElementById("llDonorResults");
+    const donorCount = document.getElementById("llDonorCount");
+    const resetButton = document.getElementById("llResetDonors");
 
-$(document).ready(function () {
-
-    "use strict";
-
-    // ==========================================
-    // 1. GLOBAL VARIABLES
-    // ==========================================
-
-    const DATA_URL = "./data.json";
-
-    let appData = {
-        donors: [],
-        camps: [],
-        stats: []
-    };
+    let allDonors = [];
 
 
-    // ==========================================
-    // 2. MESSAGE FUNCTION (jQuery + DOM)
-    // ==========================================
+    // Convert availability values into true/false
 
-    function showMessage(message) {
-
-        let notice = $("#lifelinkNotice");
-
-        if (notice.length === 0) {
-
-            notice = $("<div>", {
-                id: "lifelinkNotice",
-                class: "dynamic-message",
-                role: "status"
-            }).prependTo("main");
-
-        }
-
-        notice
-            .text(message)
-            .stop(true, true)
-            .fadeIn(150)
-            .delay(2400)
-            .fadeOut(300);
-
+    function isAvailable(value) {
+        return value === true ||
+            value === 1 ||
+            ["true", "yes", "available", "1"].includes(
+                String(value).toLowerCase()
+            );
     }
 
 
-    // ==========================================
-    // 3. DYNAMIC STATISTICS (map + ES6)
-    // ==========================================
+    // Load donor data from data.json
 
-    const renderStats = (stats = []) => {
+    async function loadDonors() {
 
-        const html = stats.map(
-            ({ icon, value, suffix = "", label }) => {
+        try {
 
-                return `
-                    <div class="stat-card">
+            const response = await fetch("./data.json");
 
-                        <span>${icon}</span>
-
-                        <h2>
-                            ${Number(value).toLocaleString("en-IN")}${suffix}
-                        </h2>
-
-                        <p>${label}</p>
-
-                    </div>
-                `;
-
+            if (!response.ok) {
+                throw new Error("Could not load data.json");
             }
-        ).join("");
 
-        $(".stats-container").html(html);
+            const data = await response.json();
 
-    };
-
-
-    // ==========================================
-    // 4. CREATE DONOR SEARCH SECTION
-    // ==========================================
-
-    function createDonorFinder() {
-
-        if ($("#donorFinder").length) {
-            return;
-        }
-
-        const section = `
-
-            <section class="section" id="donorFinder">
-
-                <div class="container">
-
-                    <h2>Find a Demo Donor</h2>
-
-                    <p class="section-description">
-                        Search donors by name, blood group and city.
-                    </p>
-
-                    <div class="dynamic-search">
-
-                        <input
-                            type="search"
-                            id="donorName"
-                            placeholder="Search donor name"
-                        >
-
-                        <select id="donorBloodGroup">
-
-                            <option value="">All Blood Groups</option>
-
-                            <option value="A+">A+</option>
-                            <option value="A-">A-</option>
-                            <option value="B+">B+</option>
-                            <option value="B-">B-</option>
-                            <option value="AB+">AB+</option>
-                            <option value="AB-">AB-</option>
-                            <option value="O+">O+</option>
-                            <option value="O-">O-</option>
-
-                        </select>
-
-                        <input
-                            type="search"
-                            id="donorCity"
-                            placeholder="Search city"
-                        >
-
-                    </div>
-
-                    <p id="donorResultCount"></p>
-
-                    <div id="donorResults" class="dynamic-results"></div>
-
-                </div>
-
-            </section>
-
-        `;
-
-        $("#camps").before(section);
-
-    }
-
-
-    // ==========================================
-    // 5. DISPLAY DONORS (map + destructuring)
-    // ==========================================
-
-    function renderDonors(donors = []) {
-
-        const html = donors.map(
-            ({ name, bloodGroup, city, phone, available }) => {
-
-                const status = available
-                    ? "Demo availability: Yes"
-                    : "Demo availability: No";
-
-                const statusClass = available
-                    ? ""
-                    : "unavailable";
-
-                return `
-
-                    <article class="dynamic-donor">
-
-                        <h3>${name}</h3>
-
-                        <p>
-                            <strong>Blood Group:</strong>
-                            ${bloodGroup}
-                        </p>
-
-                        <p>
-                            <strong>City:</strong>
-                            ${city}
-                        </p>
-
-                        <p class="dynamic-status ${statusClass}">
-                            ${status}
-                        </p>
-
-                        <button
-                            type="button"
-                            class="btn btn-primary donor-contact">
-
-                            Show demo contact
-
-                        </button>
-
-                        <p class="donor-phone" hidden>
-                            ${phone}
-                        </p>
-
-                    </article>
-
-                `;
-
-            }
-        ).join("");
-
-        $("#donorResults").html(
-
-            html || "<p>No matching demo donors found.</p>"
-
-        );
-
-        $("#donorResultCount").text(
-            donors.length + " demo donor records found."
-        );
-
-    }
-
-
-    // ==========================================
-    // 6. SEARCH AND FILTER DONORS
-    // ==========================================
-
-    function filterDonors() {
-
-        const name = ($("#donorName").val() || "")
-            .trim()
-            .toLowerCase();
-
-        const blood = $("#donorBloodGroup").val() || "";
-
-        const city = ($("#donorCity").val() || "")
-            .trim()
-            .toLowerCase();
-
-
-        const result = appData.donors.filter((donor) => {
-
-            const nameMatch =
-                donor.name.toLowerCase().includes(name);
-
-            const bloodMatch =
-                blood === "" || donor.bloodGroup === blood;
-
-            const cityMatch =
-                donor.city.toLowerCase().includes(city);
-
-
-            // Logical AND operator
-
-            return nameMatch && bloodMatch && cityMatch;
-
-        });
-
-
-        renderDonors(result);
-
-    }
-
-
-    // ==========================================
-    // 7. DYNAMIC BLOOD CAMPS
-    // ==========================================
-
-    function renderCamps(camps = []) {
-
-        const html = camps.map((camp) => {
-
-            const remaining = Math.max(
-                0,
-                camp.capacity - camp.filled
-            );
-
-            const isFull = remaining === 0;
-
-            return `
-
-                <article class="card dynamic-camp">
-
-                    <span class="badge badge-navy">
-                        ${camp.date}
-                    </span>
-
-                    <h3>${camp.title}</h3>
-
-                    <p>📍 ${camp.location}</p>
-
-                    <small>
-                        ${camp.filled} / ${camp.capacity} slots filled
-                    </small>
-
-                    <small>
-                        ${remaining} slots remaining
-                    </small>
-
-                    <button
-                        type="button"
-                        class="btn btn-primary camp-register"
-                        data-camp-id="${camp.id}"
-                        ${isFull ? "disabled" : ""}>
-
-                        ${isFull ? "Camp Full" : "Register Interest"}
-
-                    </button>
-
-                </article>
-
-            `;
-
-        }).join("");
-
-
-        $("#camps .cards-grid").html(
-
-            html || "<p>No upcoming camps available.</p>"
-
-        );
-
-    }
-
-
-    // ==========================================
-    // 8. AJAX - LOAD DATA FROM JSON
-    // ==========================================
-
-    function loadData() {
-
-        $("<p>", {
-            id: "lifelinkLoading",
-            class: "dynamic-message",
-            text: "Loading LifeLink data..."
-        }).prependTo("main");
-
-
-        $.ajax({
-
-            url: DATA_URL,
-
-            method: "GET",
-
-            dataType: "json",
-
-            timeout: 10000
-
-        })
-
-        // SUCCESS CALLBACK
-
-        .done(function (data) {
-
-            appData = { ...data };
-
-            // Load statistics
-            renderStats(appData.stats ?? []);
-
-            // Create donor section
-            createDonorFinder();
-
-            // Display donor records
-            renderDonors(appData.donors ?? []);
-
-            // Display camp records
-            renderCamps(appData.camps ?? []);
-
-            $("#lifelinkLoading").remove();
-
-            showMessage("LifeLink data loaded successfully!");
-
-            $("#donorFinder .section-description").after(
-
-                $("<p>", {
-                    class: "dynamic-empty",
-                    text: data.notice ?? "Demo data loaded."
-                })
-
-            );
-
-        })
-
-
-        // ERROR CALLBACK
-
-        .fail(function (xhr, status) {
-
-            $("#lifelinkLoading").remove();
-
-            showMessage(
-                "Unable to load data. Check data.json and Live Server."
-            );
-
-            $("#donorResults").html(
-                "<p>Data could not be loaded.</p>"
-            );
-
-        });
-
-    }
-
-
-    // ==========================================
-    // 9. DONOR SEARCH EVENTS (jQuery)
-    // ==========================================
-
-    $(document).on(
-        "input change",
-        "#donorName, #donorCity, #donorBloodGroup",
-        function () {
+            allDonors = Array.isArray(data.donors)
+                ? data.donors
+                : [];
 
             filterDonors();
 
+        } catch (error) {
+
+            donorCount.textContent = "Unable to load donor records.";
+
+            donorResults.textContent =
+                "Check data.json and run the website using Live Server.";
+
+            console.error("Donor data error:", error);
         }
-    );
+    }
 
 
-    // ==========================================
-    // 10. SHOW / HIDE DONOR CONTACT
-    // ==========================================
+    // Filter donor list using all selected filters
 
-    $(document).on("click", ".donor-contact", function () {
+    function filterDonors() {
 
-        const phone = $(this).siblings(".donor-phone");
+        const nameValue = donorName.value.trim().toLowerCase();
 
-        const shouldHide = !phone.prop("hidden");
+        const bloodValue = donorBlood.value.trim().toUpperCase();
 
-        phone.prop("hidden", shouldHide);
+        const cityValue = donorCity.value.trim().toLowerCase();
 
-        $(this).text(
+        const availabilityValue = donorAvailability.value;
 
-            shouldHide
-                ? "Show demo contact"
-                : "Hide demo contact"
+        const filteredDonors = allDonors.filter(function (donor) {
 
-        );
+            const name = String(
+                donor.name || donor.fullName || ""
+            ).toLowerCase();
 
-    });
+            const blood = String(
+                donor.bloodGroup ||
+                donor.blood_group ||
+                donor.bloodgroup ||
+                ""
+            ).toUpperCase();
+
+            const city = String(
+                donor.city || donor.location || ""
+            ).toLowerCase();
+
+            const available = isAvailable(
+                donor.available ??
+                donor.isAvailable ??
+                donor.availability
+            );
+
+            const matchesName = name.includes(nameValue);
+
+            const matchesBlood =
+                bloodValue === "" || blood === bloodValue;
+
+            const matchesCity = city.includes(cityValue);
+
+            const matchesAvailability =
+                availabilityValue === "" ||
+                (availabilityValue === "available" && available) ||
+                (availabilityValue === "unavailable" && !available);
+
+            return matchesName &&
+                matchesBlood &&
+                matchesCity &&
+                matchesAvailability;
+
+        });
+
+        displayDonors(filteredDonors);
+    }
 
 
-    // ==========================================
-    // 11. CAMP REGISTRATION INTERACTION
-    // ==========================================
+    // Display matching donor records
 
-    $(document).on("click", ".camp-register", function () {
+    function displayDonors(donors) {
 
-        const id = Number($(this).attr("data-camp-id"));
+        donorResults.replaceChildren();
 
-        const camp = appData.camps.find(
-            item => item.id === id
-        );
+        donorCount.textContent =
+            donors.length + " donor(s) found";
 
-        if (!camp) {
+        if (donors.length === 0) {
 
-            showMessage("Camp not found!");
+            const message = document.createElement("p");
+
+            message.className = "ll-no-donors";
+
+            message.textContent =
+                "No donors found. Try changing your filters.";
+
+            donorResults.appendChild(message);
 
             return;
-
         }
 
-        showMessage(
-            "Interest recorded for " + camp.title + " (demo only)."
-        );
+        donors.forEach(function (donor) {
 
-    });
+            const name = donor.name || donor.fullName || "Unknown";
+
+            const blood = donor.bloodGroup ||
+                donor.blood_group ||
+                donor.bloodgroup ||
+                "Not specified";
+
+            const city = donor.city ||
+                donor.location ||
+                "Not specified";
+
+            const available = isAvailable(
+                donor.available ??
+                donor.isAvailable ??
+                donor.availability
+            );
+
+            const card = document.createElement("article");
+            card.className = "ll-donor-card";
+
+            const heading = document.createElement("h3");
+            heading.textContent = name;
+
+            const bloodGroup = document.createElement("span");
+            bloodGroup.className = "ll-donor-blood";
+            bloodGroup.textContent = blood;
+
+            const cityText = document.createElement("p");
+            cityText.textContent = "City: " + city;
+
+            const status = document.createElement("p");
+            status.className = available
+                ? "ll-donor-available"
+                : "ll-donor-unavailable";
+
+            status.textContent = available
+                ? "Status: Available"
+                : "Status: Unavailable";
+
+            card.append(heading, bloodGroup, cityText, status);
+
+            donorResults.appendChild(card);
+        });
+    }
 
 
-    // ==========================================
-    // 12. BLOOD GROUP CARD CLICK EVENT
-    // ==========================================
+    // Input and dropdown events
 
-    $(document).on("click", ".blood-box", function () {
-
-        $(".blood-box").css("border", "none");
-
-        $(this).css(
-            "border",
-            "3px solid #B0203A"
-        );
-
-        const group = $(this)
-            .find("strong")
-            .text()
-            .trim();
-
-        showMessage("You selected blood group " + group);
-
-    });
+    donorName.addEventListener("input", filterDonors);
+    donorCity.addEventListener("input", filterDonors);
+    donorBlood.addEventListener("change", filterDonors);
+    donorAvailability.addEventListener("change", filterDonors);
 
 
-    // ==========================================
-    // 13. NAVBAR AND HERO BUTTON EVENTS
-    // ==========================================
+    // Reset all filters
 
-    $(document).on(
-        "click",
-        ".nav-actions a, .hero-buttons a, .emergency-card a",
-        function () {
+    resetButton.addEventListener("click", function () {
 
-            const label = $(this).text().trim();
+        donorName.value = "";
+        donorBlood.value = "";
+        donorCity.value = "";
+        donorAvailability.value = "";
 
-            if (label) {
-
-                showMessage("Opening: " + label);
-
+        document.querySelectorAll(".ll-blood-card").forEach(
+            function (card) {
+                card.classList.remove("active");
+                card.setAttribute("aria-pressed", "false");
             }
+        );
 
+        filterDonors();
+    });
+
+
+    /* =========================================
+       2. BLOOD GROUP CARDS
+    ========================================= */
+
+    const bloodCards = document.querySelectorAll(".ll-blood-card");
+
+    bloodCards.forEach(function (card) {
+
+        card.addEventListener("click", function () {
+
+            // Remove previous active selection
+
+            bloodCards.forEach(function (item) {
+                item.classList.remove("active");
+                item.setAttribute("aria-pressed", "false");
+            });
+
+            // Highlight selected card
+
+            card.classList.add("active");
+            card.setAttribute("aria-pressed", "true");
+
+            // Get selected blood group
+
+            const selectedBlood = card.dataset.blood;
+
+            // Update Find Donor dropdown
+
+            donorBlood.value = selectedBlood;
+
+            // Apply filter
+
+            filterDonors();
+
+            // Scroll to donor search
+
+            document.getElementById("find-donor").scrollIntoView({
+                behavior: "smooth"
+            });
+
+        });
+
+    });
+
+
+    /* =========================================
+       3. LOGIN MODAL
+    ========================================= */
+
+    const openLogin = document.getElementById("llOpenLogin");
+    const closeLogin = document.getElementById("llCloseLogin");
+    const loginModal = document.getElementById("llLoginModal");
+    const loginForm = document.getElementById("llLoginForm");
+    const loginMessage = document.getElementById("llLoginMessage");
+
+    const loginEmail = document.getElementById("llLoginEmail");
+    const loginPassword = document.getElementById("llLoginPassword");
+
+
+    // Open login modal
+
+    function showLogin() {
+
+        loginModal.classList.add("active");
+        loginModal.setAttribute("aria-hidden", "false");
+
+        loginMessage.textContent = "";
+
+        loginEmail.focus();
+    }
+
+
+    // Close login modal
+
+    function hideLogin() {
+
+        loginModal.classList.remove("active");
+        loginModal.setAttribute("aria-hidden", "true");
+    }
+
+
+    openLogin.addEventListener("click", showLogin);
+
+    closeLogin.addEventListener("click", hideLogin);
+
+
+    // Close modal on outside click
+
+    loginModal.addEventListener("click", function (event) {
+
+        if (event.target === loginModal) {
+            hideLogin();
         }
-    );
+
+    });
 
 
-    // ==========================================
-    // 14. START APPLICATION
-    // ==========================================
+    // Close modal with Escape key
 
-    loadData();
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape" &&
+            loginModal.classList.contains("active")) {
+
+            hideLogin();
+        }
+
+    });
+
+
+    // Login form submission
+
+    loginForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const email = loginEmail.value.trim();
+        const password = loginPassword.value;
+
+        if (!email || !password) {
+
+            loginMessage.style.color = "#B0203A";
+            loginMessage.textContent =
+                "Please enter your email and password.";
+
+            return;
+        }
+
+        // Frontend demonstration only.
+        // Connect this form to backend authentication
+        // when the team implements the backend.
+
+        loginMessage.style.color = "#2E7D5B";
+        loginMessage.textContent =
+            "Form submitted. Backend authentication is not connected yet.";
+
+    });
+
+
+    /* =========================================
+       4. INITIALIZE DONOR DATA
+    ========================================= */
+
+    loadDonors();
+
+});
+
+
+
+// Footer Login Link
+
+const footerLogin = document.getElementById("llFooterLogin");
+
+footerLogin.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    showLogin();
 
 });
