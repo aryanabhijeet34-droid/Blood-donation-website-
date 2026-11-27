@@ -144,6 +144,112 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+
+        // Frontend demonstration only.
+        // No emergency request is sent to a hospital or donor.
+
+        emergencyMessage.style.color = "#2E7D5B";
+
+        emergencyMessage.textContent =
+            "Form validated. No real emergency request was sent. " +
+            "Contact a hospital or blood bank directly.";
+
+        console.log("Emergency form data:", {
+            patientName: patientName,
+            contact: contact,
+            bloodGroup: bloodGroup,
+            units: units,
+            hospital: hospital
+        });
+
+        emergencyForm.reset();
+
+    });
+
+
+    /* =====================================
+       MEMBER 4: REGISTRATION
+    ===================================== */
+
+    const registerForm =
+        document.getElementById("m4RegisterForm");
+
+    const registerMessage =
+        document.getElementById("m4RegisterMessage");
+
+
+    registerForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        if (!registerForm.checkValidity()) {
+            registerForm.reportValidity();
+            return;
+        }
+
+        const name =
+            document.getElementById("m4Name").value.trim();
+
+        const email =
+            document.getElementById("m4Email").value.trim();
+
+        const phone =
+            document.getElementById("m4Phone").value.trim();
+
+        const bloodGroup =
+            document.getElementById("m4RegisterBlood").value;
+
+        const city =
+            document.getElementById("m4City").value.trim();
+
+        const password =
+            document.getElementById("m4Password").value;
+
+
+        if (!/^[0-9]{10}$/.test(phone)) {
+
+            registerMessage.style.color = "#B0203A";
+
+            registerMessage.textContent =
+                "Please enter a valid 10-digit phone number.";
+
+            return;
+        }
+
+        if (password.length < 8) {
+
+            registerMessage.style.color = "#B0203A";
+
+            registerMessage.textContent =
+                "Password must contain at least 8 characters.";
+
+            return;
+        }
+
+
+        // Frontend demonstration only.
+        // Do not store passwords in browser storage or JSON.
+        // Connect to secure backend authentication later.
+
+        registerMessage.style.color = "#2E7D5B";
+
+        registerMessage.textContent =
+            "Form validated successfully. Backend registration " +
+            "is not connected yet.";
+
+        console.log("Registration form data:", {
+            name: name,
+            email: email,
+            phone: phone,
+            bloodGroup: bloodGroup,
+            city: city
+        });
+
+        registerForm.reset();
+
+    });
+
+});
         donors.forEach(function (donor) {
 
             const name = donor.name || donor.fullName || "Unknown";

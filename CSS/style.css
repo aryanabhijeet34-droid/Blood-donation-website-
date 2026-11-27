@@ -1,0 +1,561 @@
+/* =====================================
+   MEMBER 4: EMERGENCY
+===================================== */
+
+.m4-emergency {
+    width: min(1330px, 90%);
+    margin: 75px auto;
+    padding: 45px;
+    background: #7E1729;
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.m4-emergency-content > span {/* =====================================
+   MEMBER 4: EMERGENCY
+===================================== */
+
+.m4-emergency {
+    width: min(1330px, 90%);
+    margin: 75px auto;
+    padding: 45px;
+    background: #7E1729;
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.m4-emergency-content > span {
+    color: #F4C7CF;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.m4-emergency-content h2 {
+    color: #FFFFFF;
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.m4-emergency-content p {
+    color: #F5E8EA;
+    line-height: 1.8;
+}
+
+.m4-emergency-form-box {
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 28px;
+}
+
+.m4-emergency-form-box h3 {
+    color: #12263A;
+    font-size: 22px;
+    margin: 0 0 20px;
+}
+
+#m4EmergencyForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#m4EmergencyForm label,
+#m4RegisterForm label {
+    color: #12263A;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+#m4EmergencyForm input,
+#m4EmergencyForm select,
+#m4RegisterForm input,
+#m4RegisterForm select {
+    width: 100%;
+    min-height: 44px;
+    padding: 11px;
+    margin-bottom: 16px;
+    border: 1px solid #DDD5D2;
+    border-radius: 7px;
+    background: #FFFFFF;
+    outline: none;
+    font: inherit;
+}
+
+#m4EmergencyForm input:focus,
+#m4EmergencyForm select:focus,
+#m4RegisterForm input:focus,
+#m4RegisterForm select:focus {
+    border-color: #B0203A;
+}
+
+.m4-emergency-submit,
+.m4-register-submit {
+    border: none;
+    border-radius: 8px;
+    background: #B0203A;
+    color: #FFFFFF;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: 750;
+    cursor: pointer;
+}
+
+.m4-emergency-submit:hover,
+.m4-register-submit:hover {
+    background: #7E1729;
+}
+
+.m4-emergency-note {
+    color: #6B6570;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.m4-form-message {
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 1.6;
+    margin-top: 14px;
+}
+
+
+/* =====================================
+   MEMBER 4: REGISTRATION
+===================================== */
+
+.m4-register {
+    width: min(1330px, 90%);
+    margin: auto;
+    padding: 75px 0;
+}
+
+.m4-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.m4-heading > span {
+    color: #B0203A;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.m4-heading h2 {
+    color: #12263A;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.m4-heading p {
+    color: #6B6570;
+    line-height: 1.7;
+}
+
+.m4-register-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.m4-register-info {
+    background: #F7E3E6;
+    border-radius: 15px;
+    padding: 35px;
+}
+
+.m4-register-icon {
+    font-size: 45px;
+}
+
+.m4-register-info h3 {
+    color: #7E1729;
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.m4-register-info p,
+.m4-register-info li {
+    color: #6B6570;
+    line-height: 1.8;
+}
+
+.m4-register-info ul {
+    padding-left: 20px;
+}
+
+.m4-register-form-box {
+    background: #FFFFFF;
+    border: 1px solid #E9E1DC;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.m4-register-form-box h3 {
+    color: #12263A;
+    margin: 0 0 22px;
+    font-size: 23px;
+}
+
+#m4RegisterForm {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =====================================
+   MEMBER 4: TESTIMONIALS
+===================================== */
+
+.m4-testimonials {
+    width: min(1330px, 90%);
+    margin: auto;
+    padding: 75px 0;
+}
+
+.m4-testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.m4-testimonial-card {
+    padding: 28px;
+    background: #FFFFFF;
+    border: 1px solid #E9E1DC;
+    border-radius: 14px;
+}
+
+.m4-stars {
+    color: #C79A4B;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.m4-testimonial-card p {
+    color: #6B6570;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.m4-testimonial-card h3 {
+    color: #12263A;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.m4-testimonial-card span {
+    color: #6B6570;
+    font-size: 13px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .m4-emergency,
+    .m4-register-container {
+        grid-template-columns: 1fr;
+    }
+
+    .m4-testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .m4-emergency {
+        padding: 25px;
+    }
+
+    .m4-emergency-content h2 {
+        font-size: 30px;
+    }
+
+    .m4-testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .m4-heading h2 {
+        font-size: 29px;
+    }
+
+    .m4-register-form-box {
+        padding: 20px;
+    }
+}
+    color: #F4C7CF;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.m4-emergency-content h2 {
+    color: #FFFFFF;
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.m4-emergency-content p {
+    color: #F5E8EA;
+    line-height: 1.8;
+}
+
+.m4-emergency-form-box {
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 28px;
+}
+
+.m4-emergency-form-box h3 {
+    color: #12263A;
+    font-size: 22px;
+    margin: 0 0 20px;
+}
+
+#m4EmergencyForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#m4EmergencyForm label,
+#m4RegisterForm label {
+    color: #12263A;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+#m4EmergencyForm input,
+#m4EmergencyForm select,
+#m4RegisterForm input,
+#m4RegisterForm select {
+    width: 100%;
+    min-height: 44px;
+    padding: 11px;
+    margin-bottom: 16px;
+    border: 1px solid #DDD5D2;
+    border-radius: 7px;
+    background: #FFFFFF;
+    outline: none;
+    font: inherit;
+}
+
+#m4EmergencyForm input:focus,
+#m4EmergencyForm select:focus,
+#m4RegisterForm input:focus,
+#m4RegisterForm select:focus {
+    border-color: #B0203A;
+}
+
+.m4-emergency-submit,
+.m4-register-submit {
+    border: none;
+    border-radius: 8px;
+    background: #B0203A;
+    color: #FFFFFF;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: 750;
+    cursor: pointer;
+}
+
+.m4-emergency-submit:hover,
+.m4-register-submit:hover {
+    background: #7E1729;
+}
+
+.m4-emergency-note {
+    color: #6B6570;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.m4-form-message {
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 1.6;
+    margin-top: 14px;
+}
+
+
+/* =====================================
+   MEMBER 4: REGISTRATION
+===================================== */
+
+.m4-register {
+    width: min(1330px, 90%);
+    margin: auto;
+    padding: 75px 0;
+}
+
+.m4-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.m4-heading > span {
+    color: #B0203A;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.m4-heading h2 {
+    color: #12263A;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.m4-heading p {
+    color: #6B6570;
+    line-height: 1.7;
+}
+
+.m4-register-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.m4-register-info {
+    background: #F7E3E6;
+    border-radius: 15px;
+    padding: 35px;
+}
+
+.m4-register-icon {
+    font-size: 45px;
+}
+
+.m4-register-info h3 {
+    color: #7E1729;
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.m4-register-info p,
+.m4-register-info li {
+    color: #6B6570;
+    line-height: 1.8;
+}
+
+.m4-register-info ul {
+    padding-left: 20px;
+}
+
+.m4-register-form-box {
+    background: #FFFFFF;
+    border: 1px solid #E9E1DC;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.m4-register-form-box h3 {
+    color: #12263A;
+    margin: 0 0 22px;
+    font-size: 23px;
+}
+
+#m4RegisterForm {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =====================================
+   MEMBER 4: TESTIMONIALS
+===================================== */
+
+.m4-testimonials {
+    width: min(1330px, 90%);
+    margin: auto;
+    padding: 75px 0;
+}
+
+.m4-testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.m4-testimonial-card {
+    padding: 28px;
+    background: #FFFFFF;
+    border: 1px solid #E9E1DC;
+    border-radius: 14px;
+}
+
+.m4-stars {
+    color: #C79A4B;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.m4-testimonial-card p {
+    color: #6B6570;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.m4-testimonial-card h3 {
+    color: #12263A;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.m4-testimonial-card span {
+    color: #6B6570;
+    font-size: 13px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .m4-emergency,
+    .m4-register-container {
+        grid-template-columns: 1fr;
+    }
+
+    .m4-testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .m4-emergency {
+        padding: 25px;
+    }
+
+    .m4-emergency-content h2 {
+        font-size: 30px;
+    }
+
+    .m4-testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .m4-heading h2 {
+        font-size: 29px;
+    }
+
+    .m4-register-form-box {
+        padding: 20px;
+    }
+}

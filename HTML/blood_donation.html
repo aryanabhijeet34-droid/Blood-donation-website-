@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="blood_donation.css">
+<body>
+
+    <!-- ========== MEMBER 4: EMERGENCY ========== -->
+
+<section class="m4-emergency" id="emergency">
+
+    <div class="m4-emergency-content">
+
+        <span>URGENT BLOOD REQUIREMENT?</span><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========== MEMBER 4: EMERGENCY ========== -->
+
+<section class="m4-emergency" id="emergency">
+
+    <div class="m4-emergency-content">
+
+        <span>URGENT BLOOD REQUIREMENT?</span>
+
+        <h2>Every Second Matters.</h2>
+
+        <p>
+            If someone needs blood urgently, contact a hospital
+            or authorized blood bank immediately. You can also
+            prepare a request using this form.
+        </p>
+
+    </div>
+
+
+    <div class="m4-emergency-form-box">
+
+        <h3>Emergency Blood Request</h3>
+
+        <form id="m4EmergencyForm">
+
+            <label for="m4PatientName">Patient Name</label>
+            <input type="text" id="m4PatientName"
+                placeholder="Enter patient name" required>
+
+            <label for="m4Contact">Contact Number</label>
+            <input type="tel" id="m4Contact"
+                placeholder="Enter contact number"
+                pattern="[0-9]{10}" maxlength="10" required>
+
+            <label for="m4BloodGroup">Required Blood Group</label>
+            <select id="m4BloodGroup" required>
+                <option value="">Select Blood Group</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+
+            <label for="m4Units">Units Required</label>
+            <input type="number" id="m4Units"
+                min="1" max="20" value="1" required>
+
+            <label for="m4Hospital">Hospital / City</label>
+            <input type="text" id="m4Hospital"
+                placeholder="Enter hospital or city" required>
+
+            <button type="submit" class="m4-emergency-submit">
+                Submit Request
+            </button>
+
+        </form>
+
+        <p id="m4EmergencyMessage"
+            class="m4-form-message" aria-live="polite"></p>
+
+        <p class="m4-emergency-note">
+            This demo form does not send requests to hospitals
+            or donors. For an emergency, contact a hospital
+            or local emergency service directly.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ========== MEMBER 4: REGISTRATION ========== -->
+
+<section class="m4-register" id="register">
+
+    <div class="m4-heading">
+        <span>JOIN OUR COMMUNITY</span>
+        <h2>Become a LifeLink Member</h2>
+        <p>
+            Register your details to participate in the
+            LifeLink blood donation community.
+        </p>
+    </div>
+
+
+    <div class="m4-register-container">
+
+        <div class="m4-register-info">
+
+            <div class="m4-register-icon">❤️</div>
+
+            <h3>Become a Blood Donor</h3>
+
+            <p>
+                Your willingness to donate can help support
+                people who need blood.
+            </p>
+
+            <ul>
+                <li>Join the donor community.</li>
+                <li>Provide your blood group and location.</li>
+                <li>Help promote voluntary blood donation.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="m4-register-form-box">
+
+            <h3>Create Your Account</h3>
+
+            <form id="m4RegisterForm">
+
+                <label for="m4Name">Full Name</label>
+                <input type="text" id="m4Name"
+                    placeholder="Enter your full name" required>
+
+                <label for="m4Email">Email Address</label>
+                <input type="email" id="m4Email"
+                    placeholder="Enter your email" required>
+
+                <label for="m4Phone">Phone Number</label>
+                <input type="tel" id="m4Phone"
+                    placeholder="10-digit phone number"
+                    pattern="[0-9]{10}" maxlength="10" required>
+
+                <label for="m4RegisterBlood">Blood Group</label>
+                <select id="m4RegisterBlood" required>
+                    <option value="">Select Blood Group</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                </select>
+
+                <label for="m4City">City</label>
+                <input type="text" id="m4City"
+                    placeholder="Enter your city" required>
+
+                <label for="m4Password">Create Password</label>
+                <input type="password" id="m4Password"
+                    placeholder="Create a password"
+                    minlength="8" required>
+
+                <button type="submit" class="m4-register-submit">
+                    Register Now
+                </button>
+
+            </form>
+
+            <p id="m4RegisterMessage"
+                class="m4-form-message" aria-live="polite"></p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========== MEMBER 4: TESTIMONIALS ========== -->
+
+<section class="m4-testimonials" id="testimonials">
+
+    <div class="m4-heading">
+        <span>COMMUNITY STORIES</span>
+        <h2>Making a Difference Together</h2>
+        <p>
+            Every act of voluntary donation represents
+            compassion and community support.
+        </p>
+    </div>
+
+    <div class="m4-testimonial-grid">
+
+        <article class="m4-testimonial-card">
+            <div class="m4-stars">★★★★★</div>
+            <p>
+                "Blood donation is a meaningful way to support
+                people during difficult medical situations."
+            </p>
+            <h3>Voluntary Donor</h3>
+            <span>LifeLink Community</span>
+        </article>
+
+        <article class="m4-testimonial-card">
+            <div class="m4-stars">★★★★★</div>
+            <p>
+                "Community awareness can encourage more people
+                to learn about voluntary blood donation."
+            </p>
+            <h3>Community Member</h3>
+            <span>LifeLink Community</span>
+        </article>
+
+        <article class="m4-testimonial-card">
+            <div class="m4-stars">★★★★★</div>
+            <p>
+                "Connecting donors and blood banks can help
+                people find useful information more easily."
+            </p>
+            <h3>Volunteer</h3>
+            <span>LifeLink Community</span>
+        </article>
+
+    </div>
+
+
+</section>
+    <script src="blood_donation.js"></script>
+</body>
+</html>
+
+        <h2>Every Second Matters.</h2>
+
+        <p>
+            If someone needs blood urgently, contact a hospital
+            or authorized blood bank immediately. You can also
+            prepare a request using this form.
+        </p>
+
+    </div>
+
+
+    <div class="m4-emergency-form-box">
+
+        <h3>Emergency Blood Request</h3>
+
+        <form id="m4EmergencyForm">
+
+            <label for="m4PatientName">Patient Name</label>
+            <input type="text" id="m4PatientName"
+                placeholder="Enter patient name" required>
+
+            <label for="m4Contact">Contact Number</label>
+            <input type="tel" id="m4Contact"
+                placeholder="Enter contact number"
+                pattern="[0-9]{10}" maxlength="10" required>
+
+            <label for="m4BloodGroup">Required Blood Group</label>
+            <select id="m4BloodGroup" required>
+                <option value="">Select Blood Group</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+
+            <label for="m4Units">Units Required</label>
+            <input type="number" id="m4Units"
+                min="1" max="20" value="1" required>
+
+            <label for="m4Hospital">Hospital / City</label>
+            <input type="text" id="m4Hospital"
+                placeholder="Enter hospital or city" required>
+
+            <button type="submit" class="m4-emergency-submit">
+                Submit Request
+            </button>
+
+        </form>
+
+        <p id="m4EmergencyMessage"
+            class="m4-form-message" aria-live="polite"></p>
+
+        <p class="m4-emergency-note">
+            This demo form does not send requests to hospitals
+            or donors. For an emergency, contact a hospital
+            or local emergency service directly.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ========== MEMBER 4: REGISTRATION ========== -->
+
+<section class="m4-register" id="register">
+
+    <div class="m4-heading">
+        <span>JOIN OUR COMMUNITY</span>
+        <h2>Become a LifeLink Member</h2>
+        <p>
+            Register your details to participate in the
+            LifeLink blood donation community.
+        </p>
+    </div>
+
+
+    <div class="m4-register-container">
+
+        <div class="m4-register-info">
+
+            <div class="m4-register-icon">❤️</div>
+
+            <h3>Become a Blood Donor</h3>
+
+            <p>
+                Your willingness to donate can help support
+                people who need blood.
+            </p>
+
+            <ul>
+                <li>Join the donor community.</li>
+                <li>Provide your blood group and location.</li>
+                <li>Help promote voluntary blood donation.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="m4-register-form-box">
+
+            <h3>Create Your Account</h3>
+
+            <form id="m4RegisterForm">
+
+                <label for="m4Name">Full Name</label>
+                <input type="text" id="m4Name"
+                    placeholder="Enter your full name" required>
+
+                <label for="m4Email">Email Address</label>
+                <input type="email" id="m4Email"
+                    placeholder="Enter your email" required>
+
+                <label for="m4Phone">Phone Number</label>
+                <input type="tel" id="m4Phone"
+                    placeholder="10-digit phone number"
+                    pattern="[0-9]{10}" maxlength="10" required>
+
+                <label for="m4RegisterBlood">Blood Group</label>
+                <select id="m4RegisterBlood" required>
+                    <option value="">Select Blood Group</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                </select>
+
+                <label for="m4City">City</label>
+                <input type="text" id="m4City"
+                    placeholder="Enter your city" required>
+
+                <label for="m4Password">Create Password</label>
+                <input type="password" id="m4Password"
+                    placeholder="Create a password"
+                    minlength="8" required>
+
+                <button type="submit" class="m4-register-submit">
+                    Register Now
+                </button>
+
+            </form>
+
+            <p id="m4RegisterMessage"
+                class="m4-form-message" aria-live="polite"></p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========== MEMBER 4: TESTIMONIALS ========== -->
+
+<section class="m4-testimonials" id="testimonials">
+
+    <div class="m4-heading">
+        <span>COMMUNITY STORIES</span>
+        <h2>Making a Difference Together</h2>
+        <p>
+            Every act of voluntary donation represents
+            compassion and community support.
+        </p>
+    </div>
+
+    <div class="m4-testimonial-grid">
+
+        <article class="m4-testimonial-card">
+            <div class="m4-stars">★★★★★</div>
+            <p>
+                "Blood donation is a meaningful way to support
+                people during difficult medical situations."
+            </p>
+            <h3>Voluntary Donor</h3>
+            <span>LifeLink Community</span>
+        </article>
+
+        <article class="m4-testimonial-card">
+            <div class="m4-stars">★★★★★</div>
+            <p>
+                "Community awareness can encourage more people
+                to learn about voluntary blood donation."
+            </p>
+            <h3>Community Member</h3>
+            <span>LifeLink Community</span>
+        </article>
+
+        <article class="m4-testimonial-card">
+            <div class="m4-stars">★★★★★</div>
+            <p>
+                "Connecting donors and blood banks can help
+                people find useful information more easily."
+            </p>
+            <h3>Volunteer</h3>
+            <span>LifeLink Community</span>
+        </article>
+
+    </div>
+
+
+</section>
+    <link rel="stylesheet" href="blood_donation.js">
+</body>
+</html>
