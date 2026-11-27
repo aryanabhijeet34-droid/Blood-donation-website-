@@ -1,3 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LifeLink | Give Blood. Save Lives.</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="blood_donation.css">
+
+    
+    
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header class="ll-navbar">
+
+        <a href="#home" class="ll-brand">
+            <span class="ll-brand-icon">🩸</span>
+            <span>LifeLink</span>
+        </a>
+
+        <nav class="ll-nav-links">
+            <a href="#home">Home</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#find-donor">Find Donor</a>
+            <a href="#camps">Camps</a>
+            <a href="#compatibility">Compatibility</a>
+            <a href="#awareness">Awareness</a>
+        </nav>
+
+        <div class="ll-nav-actions">
+            <a href="#emergency" class="ll-emergency-btn">🚨 Emergency</a>
+
+            <button type="button" class="ll-login-btn" id="llOpenLogin">
+                Log In
+            </button>
+
+            <a href="#register" class="ll-register-btn">Register</a>
+        </div>
+
+    </header>
+
+
+    <!-- ========== HOME / HERO ========== -->
+    <main>
+
+        <section class="ll-hero" id="home">
+
+            <div class="ll-hero-content">
+
+                <div class="ll-trust-label">
+                    Trusted by donors, hospitals &amp; blood banks
+                </div>
+
+                <h1>
+                    Give Blood.<br>
+                    <span>Save Lives.</span>
+                </h1>
+
+                <p class="ll-hero-description">
+                    LifeLink connects donors with patients, hospitals,
+                    and blood banks who need them — quickly, safely,
+                    and transparently.
+                </p>
+
+                <div class="ll-hero-buttons">
+
+                    <a href="#find-donor" class="ll-donate-btn">
+                        🩸 Donate Blood
+                    </a>
+
+                    <a href="#find-donor" class="ll-request-btn">
+                        📋 Request Blood
+                    </a>
+
+                    <a href="#find-donor" class="ll-find-btn">
+                        Find a Donor
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Blood group cards -->
+            <div class="ll-blood-panel">
+
+                <div class="ll-blood-grid">
+
+                    <button type="button" class="ll-blood-card"
+                        data-blood="A+" aria-pressed="false">
+                        <span>🩸</span>
+                        <strong>A+</strong>
+                    </button>
+
+                    <button type="button" class="ll-blood-card"
+                        data-blood="A-" aria-pressed="false">
+                        <span>🩸</span>
+                        <strong>A-</strong>
+                    </button>
+
+                    <button type="button" class="ll-blood-card"
+                        data-blood="B+" aria-pressed="false">
+                        <span>🩸</span>
+                        <strong>B+</strong>
+                    </button>
+
+                    <button type="button" class="ll-blood-card"
+                        data-blood="B-" aria-pressed="false">
+                        <span>🩸</span>
+                        <strong>B-</strong>
+                    </button>
+
+                    <button type="button" class="ll-blood-card active"
+                        data-blood="AB+" aria-pressed="true">
+                        <span>🩸</span>
+                        <strong>AB+</strong>
+                    </button>
+
+                    <button type="button" class="ll-blood-card"
+                        data-blood="AB-" aria-pressed="false">
+                        <span>🩸</span>
+                        <strong>AB-</strong>
+                    </button>
+
+                    <button type="button" class="ll-blood-card"
+                        data-blood="O+" aria-pressed="false">
+                        <span>🩸</span>
+                        <strong>O+</strong>
+                    </button>
+
+                    <button type="button" class="ll-blood-card"
+                        data-blood="O-" aria-pressed="false">
+                        <span>🩸</span>
+                        <strong>O-</strong>
+                    </button>
+
+                </div>
+
+                <p class="ll-blood-caption">
+                    Every blood group is needed. Yours could be the
+                    match someone is waiting for.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== STATISTICS ========== -->
+        <section class="ll-stats" aria-label="LifeLink statistics">
+
+            <div class="ll-stat-card">
+                <span>👥</span>
+                <h2>1,322+</h2>
+                <p>Registered Donors</p>
+            </div>
+
+            <div class="ll-stat-card">
+                <span>🩸</span>
+                <h2>3,420+</h2>
+                <p>Blood Donations</p>
+            </div>
+
+            <div class="ll-stat-card">
+                <span>💗</span>
+                <h2>9,870+</h2>
+                <p>Lives Supported</p>
+            </div>
+
+            <div class="ll-stat-card">
+                <span>📋</span>
+                <h2>12+</h2>
+                <p>Active Requests</p>
+            </div>
+
+            <div class="ll-stat-card">
+                <span>🏥</span>
+                <h2>21+</h2>
+                <p>Registered Hospitals</p>
+            </div>
+
+            <div class="ll-stat-card">
+                <span>📦</span>
+                <h2>12+</h2>
+                <p>Blood Banks</p>
+            </div>
+
+        </section>
+
+
+        <!-- ========== TEAM MEMBER 2: HOW IT WORKS ========== -->
+        <!-- Replace this placeholder with Member 2's section. -->
+        <section id="how-it-works" class="ll-team-section">
+            <h2>How LifeLink Works</h2>
+            <!-- Member 2 adds their content here. -->
+        </section>
+
+
+        <!-- ========== FIND DONOR ========== -->
+        <section class="ll-find-section" id="find-donor">
+
+            <div class="ll-section-heading">
+                <span>DONOR SEARCH</span>
+                <h2>Find a Blood Donor</h2>
+                <p>
+                    Search donors by name, blood group, city and availability.
+                </p>
+            </div>
+
+            <div class="ll-search-panel">
+
+                <div class="ll-filter-field">
+                    <label for="llDonorName">Donor Name</label>
+                    <input type="text" id="llDonorName"
+                        placeholder="Enter donor name">
+                </div>
+
+                <div class="ll-filter-field">
+                    <label for="llDonorBlood">Blood Group</label>
+                    <select id="llDonorBlood">
+                        <option value="">All Blood Groups</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+
+                <div class="ll-filter-field">
+                    <label for="llDonorCity">City</label>
+                    <input type="text" id="llDonorCity"
+                        placeholder="Enter city">
+                </div>
+
+                <div class="ll-filter-field">
+                    <label for="llDonorAvailability">Availability</label>
+                    <select id="llDonorAvailability">
+                        <option value="">All Donors</option>
+                        <option value="available">Available</option>
+                        <option value="unavailable">Unavailable</option>
+                    </select>
+                </div>
+
+                <button type="button" id="llResetDonors">
+                    Reset Filters
+                </button>
+
+            </div>
+
+            <p id="llDonorCount" class="ll-donor-count"
+                aria-live="polite">
+                Loading donors...
+            </p>
+
+            <div class="ll-donor-results" id="llDonorResults"
+                aria-live="polite">
+            </div>
+
+        </section>
+
+
+        <!-- ========== TEAM MEMBER 3: CAMPS ========== -->
+        <!-- Replace this placeholder with Member 3's section. -->
+        <section id="camps" class="ll-team-section">
+            <!-- Member 3 adds the Camps section here. -->
+        </section>
+
+
+        <!-- ========== TEAM MEMBER 2: COMPATIBILITY ========== -->
+        <!-- Replace this placeholder with Member 2's section. -->
+        <section id="compatibility" class="ll-team-section">
+            <!-- Member 2 adds Compatibility here. -->
+        </section>
+
+
+        <!-- ========== TEAM MEMBER 3: AWARENESS ========== -->
+        <!-- Replace this placeholder with Member 3's section. -->
+        <section id="awareness" class="ll-team-section">
+            <!-- Member 3 adds Awareness here. -->
+        </section>
+
+
+        <!-- ========== TEAM MEMBER 4: EMERGENCY ========== -->
+        <!-- Replace this placeholder with Member 4's section. -->
+        <section id="emergency" class="ll-team-section">
+            <!-- Member 4 adds Emergency here. -->
+        </section>
+
+
+        <!-- ========== TEAM MEMBER 4: REGISTER ========== -->
+        <!-- Replace this placeholder with Member 4's section. -->
+        <section id="register" class="ll-team-section">
+            <!-- Member 4 adds Registration here. -->
+        </section>
+
+    </main>
+
+
+<!-- ========== LIFELINK FOOTER ========== -->
+
+<footer class="ll-footer" id="footer">
+
+    <div class="ll-footer-container">
+
+        <!-- Brand -->
+        <div class="ll-footer-brand">
+
+            <a href="#home" class="ll-footer-logo">
+                <span>🩸</span>
+                LifeLink
+            </a>
+
+            <p>
+                Every drop counts. Every life matters.
+            </p>
+
+        </div>
+
+
+        <!-- Platform Links -->
+        <div class="ll-footer-column">
+
+            <h3>Platform</h3>
+
+            <a href="#home">Home</a>
+
+            <a href="#how-it-works">How It Works</a>
+
+            <a href="#find-donor">Find Donor</a>
+
+            <a href="#camps">Blood Camps</a>
+
+        </div>
+
+
+        <!-- Resources Links -->
+        <div class="ll-footer-column">
+
+            <h3>Resources</h3>
+
+            <a href="#compatibility">Compatibility</a>
+
+            <a href="#awareness">Awareness</a>
+
+            <a href="#emergency">Emergency</a>
+
+        </div>
+
+
+        <!-- Account Links -->
+        <div class="ll-footer-column">
+
+            <h3>Account</h3>
+
+            <a href="#" id="llFooterLogin">Log In</a>
+
+            <a href="#register">Register</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Copyright -->
+    <div class="ll-footer-bottom">
+
+        <p>
+            © 2026 LifeLink. Every drop counts.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+    <!-- ========== LOGIN MODAL ========== -->
+    <div class="ll-modal" id="llLoginModal"
+        aria-hidden="true">
+
+        <div class="ll-login-box" role="dialog"
+            aria-modal="true" aria-labelledby="llLoginTitle">
+
+            <button type="button" class="ll-close-login"
+                id="llCloseLogin" aria-label="Close login">
+                &times;
+            </button>
+
+            <div class="ll-login-icon">🩸</div>
+
+            <h2 id="llLoginTitle">Welcome Back!</h2>
+
+            <p class="ll-login-subtitle">
+                Log in to your LifeLink account
+            </p>
+
+            <form id="llLoginForm">
+
+                <label for="llLoginEmail">Email Address</label>
+                <input type="email" id="llLoginEmail"
+                    placeholder="Enter your email" required>
+
+                <label for="llLoginPassword">Password</label>
+                <input type="password" id="llLoginPassword"
+                    placeholder="Enter your password" required>
+
+                <button type="submit" class="ll-login-submit">
+                    Log In
+                </button>
+
+            </form>
+
+            <p id="llLoginMessage" class="ll-login-message"
+                aria-live="polite"></p>
+
+            <p class="ll-login-bottom">
+                Don't have an account?
+                <a href="#register" id="llGoRegister">Register</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="blood_donation.js" defer></script>
+</body>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
