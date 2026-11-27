@@ -1,0 +1,870 @@
+
+/* =========================================
+   LIFELINK - GLOBAL SETTINGS
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+    background: #FBF9F6;
+    color: #1A1620;
+}
+
+.ll-navbar,
+.ll-hero,
+.ll-find-section,
+.ll-team-section,
+.ll-stats {
+    width: min(1330px, 90%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ll-navbar a,
+.ll-hero a {
+    text-decoration: none;
+}
+
+.ll-navbar button,
+.ll-hero button,
+.ll-find-section button {
+    font: inherit;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.ll-navbar {
+    min-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #FBF9F6;
+    border-bottom: 1px solid #E9E1DC;
+}
+
+.ll-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1A1620;
+    font-size: 24px;
+    font-weight: 850;
+    white-space: nowrap;
+}
+
+.ll-brand-icon {
+    width: 39px;
+    height: 39px;
+    background: #B0203A;
+    color: white;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+}
+
+.ll-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.ll-nav-links a {
+    color: #6B6570;
+    font-size: 14px;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+.ll-nav-links a:hover {
+    color: #B0203A;
+}
+
+.ll-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    white-space: nowrap;
+}
+
+.ll-emergency-btn,
+.ll-login-btn,
+.ll-register-btn {
+    padding: 12px 19px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 750;
+    cursor: pointer;
+}
+
+.ll-emergency-btn {
+    background: #B0203A;
+    color: white;
+}
+
+.ll-login-btn {
+    background: transparent;
+    border: 1px solid #E9E1DC;
+    color: #6B6570;
+}
+
+.ll-register-btn {
+    background: #12263A;
+    color: white;
+    border: 1px solid #12263A;
+}
+
+.ll-emergency-btn:hover {
+    background: #7E1729;
+}
+
+.ll-login-btn:hover {
+    background: #F7E3E6;
+}
+
+.ll-register-btn:hover {
+    background: #1B3853;
+}
+
+
+/* =========================================
+   HOME / HERO
+========================================= */
+
+.ll-hero {
+    padding-top: 95px;
+    padding-bottom: 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.ll-hero-content {
+    max-width: 610px;
+}
+
+.ll-trust-label {
+    display: inline-block;
+    background: #F7E3E6;
+    color: #7E1729;
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.ll-hero h1 {
+    color: #1A1620;
+    font-size: 56px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin: 0 0 20px;
+    font-weight: 850;
+}
+
+.ll-hero h1 span {
+    color: #B0203A;
+}
+
+.ll-hero-description {
+    color: #6B6570;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0 0 30px;
+    max-width: 600px;
+}
+
+.ll-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+}
+
+.ll-donate-btn,
+.ll-request-btn,
+.ll-find-btn {
+    min-height: 60px;
+    padding: 16px 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.ll-donate-btn {
+    background: #B0203A;
+    color: white;
+}
+
+.ll-request-btn {
+    background: #12263A;
+    color: white;
+}
+
+.ll-find-btn {
+    background: transparent;
+    color: #6B6570;
+    border: 1px solid #E9E1DC;
+}
+
+.ll-donate-btn:hover {
+    background: #7E1729;
+}
+
+.ll-request-btn:hover {
+    background: #1B3853;
+}
+
+.ll-find-btn:hover {
+    background: #F7E3E6;
+}
+
+
+/* =========================================
+   BLOOD GROUP CARDS
+========================================= */
+
+.ll-blood-panel {
+    background: #FFFFFF;
+    border: 1px solid #E9E1DC;
+    border-radius: 18px;
+    padding: 28px 26px 25px;
+    box-shadow: 0 12px 40px rgba(26, 22, 32, 0.06);
+}
+
+.ll-blood-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.ll-blood-card {
+    min-height: 118px;
+    background: #F7E3E6;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    color: #7E1729;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.ll-blood-card span {
+    font-size: 25px;
+}
+
+.ll-blood-card strong {
+    font-size: 16px;
+}
+
+.ll-blood-card:hover {
+    border-color: #B0203A;
+    transform: translateY(-2px);
+}
+
+.ll-blood-card.active {
+    border: 2px solid #B0203A;
+}
+
+.ll-blood-caption {
+    color: #6B6570;
+    text-align: center;
+    font-size: 14px;
+    margin: 22px 0 0;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.ll-stats {
+    margin-top: -25px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+    position: relative;
+    z-index: 2;
+}
+
+.ll-stat-card {
+    background: #FFFFFF;
+    border: 1px solid #E9E1DC;
+    border-radius: 16px;
+    min-height: 160px;
+    padding: 25px 12px;
+    text-align: center;
+}
+
+.ll-stat-card span {
+    display: block;
+    font-size: 23px;
+    margin-bottom: 9px;
+}
+
+.ll-stat-card h2 {
+    color: #1A1620;
+    font-size: 25px;
+    margin: 0 0 7px;
+}
+
+.ll-stat-card p {
+    color: #6B6570;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+/* =========================================
+   TEAM SECTION PLACEHOLDERS
+========================================= */
+
+.ll-team-section {
+    min-height: 30px;
+    scroll-margin-top: 90px;
+}
+
+#how-it-works {
+    padding-top: 85px;
+    padding-bottom: 35px;
+}
+
+#how-it-works h2 {
+    color: #12263A;
+    font-size: 32px;
+    font-weight: 850;
+    margin: 0;
+}
+
+
+/* =========================================
+   FIND DONOR
+========================================= */
+
+.ll-find-section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.ll-section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.ll-section-heading > span {
+    color: #B0203A;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.ll-section-heading h2 {
+    color: #12263A;
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.ll-section-heading p {
+    color: #6B6570;
+}
+
+.ll-search-panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    align-items: end;
+    padding: 25px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    border: 1px solid #E9E1DC;
+}
+
+.ll-filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ll-filter-field label {
+    color: #12263A;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.ll-filter-field input,
+.ll-filter-field select {
+    width: 100%;
+    min-height: 45px;
+    padding: 10px 12px;
+    border: 1px solid #DDD5D2;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+    color: #1A1620;
+}
+
+.ll-filter-field input:focus,
+.ll-filter-field select:focus {
+    border-color: #B0203A;
+}
+
+#llResetDonors {
+    grid-column: 1 / -1;
+    justify-self: start;
+    padding: 11px 20px;
+    border: 0;
+    border-radius: 7px;
+    background: #12263A;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#llResetDonors:hover {
+    background: #1B3853;
+}
+
+.ll-donor-count {
+    color: #6B6570;
+    font-weight: 650;
+    margin: 25px 0 15px;
+}
+
+.ll-donor-results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.ll-donor-card {
+    background: white;
+    border: 1px solid #E9E1DC;
+    border-radius: 13px;
+    padding: 23px;
+    box-shadow: 0 5px 18px rgba(26, 22, 32, 0.04);
+}
+
+.ll-donor-card h3 {
+    color: #12263A;
+    font-size: 19px;
+    margin: 0 0 12px;
+}
+
+.ll-donor-card p {
+    color: #6B6570;
+    margin: 7px 0;
+    overflow-wrap: anywhere;
+}
+
+.ll-donor-blood {
+    display: inline-block;
+    background: #F7E3E6;
+    color: #B0203A;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 6px;
+}
+
+.ll-donor-available {
+    color: #2E7D5B !important;
+    font-weight: 700;
+}
+
+.ll-donor-unavailable {
+    color: #B0203A !important;
+    font-weight: 700;
+}
+
+.ll-no-donors {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: white;
+    padding: 35px;
+    color: #6B6570;
+    border-radius: 12px;
+    border: 1px solid #E9E1DC;
+}
+
+
+/* =========================================
+   LOGIN MODAL
+========================================= */
+
+.ll-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    background: rgba(18, 38, 58, 0.72);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.ll-modal.active {
+    display: flex;
+}
+
+.ll-login-box {
+    width: 100%;
+    max-width: 430px;
+    background: #FFFFFF;
+    border-radius: 17px;
+    padding: 38px;
+    position: relative;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.18);
+    animation: llLoginAppear 0.25s ease;
+}
+
+@keyframes llLoginAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ll-close-login {
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    border: 0;
+    background: transparent;
+    font-size: 30px;
+    color: #6B6570;
+    cursor: pointer;
+}
+
+.ll-login-icon {
+    width: 55px;
+    height: 55px;
+    background: #F7E3E6;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 15px;
+    font-size: 25px;
+}
+
+.ll-login-box h2 {
+    text-align: center;
+    color: #12263A;
+    font-size: 27px;
+    margin: 0;
+}
+
+.ll-login-subtitle {
+    color: #6B6570;
+    text-align: center;
+    margin: 8px 0 25px;
+}
+
+#llLoginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#llLoginForm label {
+    color: #12263A;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+#llLoginForm input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #DDD5D2;
+    border-radius: 7px;
+    outline: none;
+}
+
+#llLoginForm input:focus {
+    border-color: #B0203A;
+}
+
+.ll-login-submit {
+    background: #B0203A;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 750;
+    cursor: pointer;
+}
+
+.ll-login-submit:hover {
+    background: #7E1729;
+}
+
+.ll-login-message {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 650;
+    margin: 13px 0 0;
+}
+
+.ll-login-bottom {
+    text-align: center;
+    color: #6B6570;
+    font-size: 14px;
+    margin-top: 22px;
+}
+
+.ll-login-bottom a {
+    color: #B0203A;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1100px) {
+    .ll-navbar {
+        flex-wrap: wrap;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .ll-nav-links {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .ll-hero h1 {
+        font-size: 46px;
+    }
+
+    .ll-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ll-search-panel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ll-donor-results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .ll-navbar {
+        justify-content: center;
+    }
+
+    .ll-nav-links {
+        gap: 13px;
+    }
+
+    .ll-nav-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ll-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 55px;
+    }
+
+    .ll-hero-buttons {
+        justify-content: center;
+    }
+
+    .ll-hero h1 {
+        font-size: 39px;
+    }
+
+    .ll-blood-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ll-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ll-search-panel,
+    .ll-donor-results {
+        grid-template-columns: 1fr;
+    }
+
+    #llResetDonors {
+        grid-column: auto;
+    }
+
+    .ll-login-box {
+        padding: 32px 22px;
+    }
+}
+
+@media (max-width: 420px) {
+    .ll-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .ll-hero h1 {
+        font-size: 34px;
+    }
+}
+
+
+
+/* =========================================
+   LIFELINK FOOTER
+========================================= */
+
+.ll-footer {
+    width: 100%;
+    background: #12263A;
+    color: #FFFFFF;
+    margin-top: 70px;
+}
+
+.ll-footer-container {
+    width: min(1400px, 90%);
+    margin: auto;
+    padding: 75px 0 65px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 55px;
+}
+
+
+/* BRAND */
+
+.ll-footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 850;
+}
+
+.ll-footer-logo span {
+    font-size: 22px;
+}
+
+.ll-footer-brand p {
+    color: #B9C5D3;
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 1.7;
+}
+
+
+/* FOOTER COLUMNS */
+
+.ll-footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+}
+
+.ll-footer-column h3 {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 800;
+    margin: 0 0 5px;
+}
+
+.ll-footer-column a {
+    color: #B9C5D3;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.ll-footer-column a:hover {
+    color: #FFFFFF;
+}
+
+
+/* COPYRIGHT */
+
+.ll-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    padding: 18px 15px;
+}
+
+.ll-footer-bottom p {
+    color: #B9C5D3;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .ll-footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        padding: 50px 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .ll-footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+    }
+
+    .ll-footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .ll-footer-logo {
+        font-size: 22px;
+    }
+
+    .ll-footer-column a {
+        font-size: 14px;
+    }
+
+}
