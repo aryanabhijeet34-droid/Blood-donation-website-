@@ -1,46 +1,45 @@
+
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    /* =====================================
-       MEMBER 3: CAMP FILTER
-    ===================================== */
+    // =========================================
+    // 1. BLOOD CAMP CITY FILTER
+    // =========================================
 
-    const campFilters = document.querySelectorAll(".m3-filter");
+    const filters = document.querySelectorAll(".m3-filter");
 
-    const campCards = document.querySelectorAll(".m3-camp-card");
+    const cards = document.querySelectorAll(".m3-camp-card");
 
-    const campMessage = document.getElementById("m3CampMessage");
+    const message = document.getElementById("m3CampMessage");
 
+    filters.forEach(button => {
 
-    campFilters.forEach(function (button) {
+        button.addEventListener("click", () => {
 
-        button.addEventListener("click", function () {
-
-            // Remove previous active filter
-
-            campFilters.forEach(function (filter) {
-                filter.classList.remove("active");
+            filters.forEach(item => {
+                item.classList.remove("active");
             });
 
             button.classList.add("active");
 
             const selectedCity = button.dataset.city;
 
-            // Show matching camps
-
-            campCards.forEach(function (card) {
+            cards.forEach(card => {
 
                 const campCity = card.dataset.city;
 
-                if (selectedCity === "all" ||
-                    campCity === selectedCity) {
+                if (
+                    selectedCity === "all" ||
+                    selectedCity === campCity
+                ) {
 
                     card.hidden = false;
 
                 } else {
 
                     card.hidden = true;
+
                 }
 
             });
@@ -50,23 +49,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =====================================
-       MEMBER 3: CAMP INTEREST BUTTON
-    ===================================== */
+    // =========================================
+    // 2. CAMP INTEREST BUTTON
+    // =========================================
 
     const interestButtons =
         document.querySelectorAll(".m3-interest-btn");
 
+    interestButtons.forEach(button => {
 
-    interestButtons.forEach(function (button) {
-
-        button.addEventListener("click", function () {
+        button.addEventListener("click", () => {
 
             const campName = button.dataset.camp;
 
-            campMessage.textContent =
-                "You selected: " + campName +
-                ". Registration is not connected yet.";
+            if (message) {
+
+                message.textContent =
+                    "You selected: " + campName +
+                    ". Registration is not connected yet.";
+
+            }
 
         });
 
