@@ -868,3 +868,195 @@ body {
     }
 
 }
+
+
+/* =====================================
+   MEMBER 2: HOW IT WORKS
+===================================== */
+
+.m2-how,
+.m2-compatibility {
+    width: min(1330px, 90%);
+    margin: auto;
+    padding: 75px 0;
+}
+
+.m2-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 42px;
+}
+
+.m2-heading > span {
+    color: #B0203A;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.m2-heading h2 {
+    color: #12263A;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.m2-heading p {
+    color: #6B6570;
+    line-height: 1.7;
+}
+
+.m2-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.m2-step-card {
+    background: #FFFFFF;
+    border: 1px solid #E9E1DC;
+    border-radius: 15px;
+    padding: 28px 22px;
+    transition: 0.25s;
+}
+
+.m2-step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(26, 22, 32, 0.07);
+}
+
+.m2-step-number {
+    color: #C79A4B;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.m2-step-icon {
+    font-size: 38px;
+    margin: 17px 0;
+}
+
+.m2-step-card h3 {
+    color: #12263A;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.m2-step-card p {
+    color: #6B6570;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =====================================
+   MEMBER 2: COMPATIBILITY
+===================================== */
+
+.m2-compatibility {
+    background: #FFFFFF;
+    padding: 65px 5%;
+    border-radius: 18px;
+}
+
+.m2-compatibility-content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.m2-compatibility-info,
+.m2-compatibility-table {
+    background: #FBF9F6;
+    border: 1px solid #E9E1DC;
+    border-radius: 14px;
+    padding: 27px;
+}
+
+.m2-compat-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.m2-compatibility-info h3,
+.m2-compatibility-table h3 {
+    color: #12263A;
+    font-size: 21px;
+    margin: 0 0 15px;
+}
+
+.m2-compatibility-info p {
+    color: #6B6570;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.m2-table-scroll {
+    overflow-x: auto;
+}
+
+.m2-compatibility-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #FFFFFF;
+}
+
+.m2-compatibility-table th,
+.m2-compatibility-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #E9E1DC;
+}
+
+.m2-compatibility-table th {
+    background: #F7E3E6;
+    color: #7E1729;
+}
+
+.m2-compatibility-table td {
+    color: #6B6570;
+}
+
+.m2-compatibility-table tbody tr:hover {
+    background: #FBF9F6;
+}
+
+.m2-medical-note {
+    margin-top: 22px;
+    padding: 18px;
+    background: #F7E3E6;
+    color: #7E1729;
+    border-radius: 10px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .m2-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .m2-compatibility-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .m2-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .m2-heading h2 {
+        font-size: 29px;
+    }
+
+    .m2-compatibility-info,
+    .m2-compatibility-table {
+        padding: 18px;
+    }
+}
+
